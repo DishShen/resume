@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人簡介 | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --card-bg: #1e293b;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+
+        /* Card Layout */
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        li::before {
+            content: "▹";
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        /* Tag Styling */
+        .tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0 5px 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 100px;
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>[ 你的姓名 ]</h1>
+        <p class="subtitle">Backend Developer | Vocalist | Practitioner</p>
+    </header>
+
+    <section>
+        <h2>關於我</h2>
+        <div class="card">
+            <p>
+                擁有半導體產業的嚴謹背景，目前專注於後端軟體開發。
+                我追求技術的深度與架構的流暢，同時在聲樂與能量工作中尋求內在的平衡。
+                對我而言，程式碼與樂譜、符號系統一樣，都是理解世界秩序的媒介。
+            </p>
+        </div>
+    </section>
+
+    <section class="grid">
+        <div>
+            <h2>專業技能</h2>
+            <div class="card">
+                <div class="tag">Node.js</div>
+                <div class="tag">Python</div>
+                <div class="tag">SQL / NoSQL</div>
+                <div class="tag">API Design</div>
+                <div class="tag">System Architecture</div>
+            </div>
+        </div>
+        <div>
+            <h2>個人特質</h2>
+            <div class="card">
+                <ul>
+                    <li>追求極致的空間感與品質控制</li>
+                    <li>專業聲樂訓練（Power Mixed Voice）</li>
+                    <li>托特塔羅與薩滿能量實踐</li>
+                    <li>邏輯分析與直覺感知的平衡</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>經歷</h2>
+        <div class="card">
+            <div style="margin-bottom: 20px;">
+                <strong style="color: var(--accent-color);">後端工程進修中</strong>
+                <p style="margin: 5px 0; font-size: 0.9rem;">2026.04 - 2026.08</p>
+            </div>
+            <div>
+                <strong>半導體產業工程師</strong>
+                <p style="margin: 5px 0; font-size: 0.9rem;">長期深耕專業領域</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Crafted for Professional Authenticity</p>
+    </footer>
+</div>
+
+</body>
+</html>
